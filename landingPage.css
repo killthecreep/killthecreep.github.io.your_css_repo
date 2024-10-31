@@ -9,36 +9,14 @@
     background-color: #F2E5BF;
     margin: 1rem;
 }
-#flexbox_two {
+
+#landing{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    padding: 1em;
-    margin: 1rem;
-    
-    /* flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; */
-    /* overflow-x: auto; */
-    /* width: min-content; */
-    
-}
+    max-height: 100%;
+    width: 100%;
 
-section{
-    justify-content: center;
-}
-
-#flexbox_two img{
-    max-width: 100%;
-    height: auto;
-}
-
-.landing{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 50%;
-    height: auto;
 }
 
 .Center-logo{
@@ -83,10 +61,6 @@ li.left{
 
 li.right{
     margin-left: auto;
-}
-
-h2{
-    margin: 1em;
 }
 
 body{
