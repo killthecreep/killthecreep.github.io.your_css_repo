@@ -2,13 +2,21 @@
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    padding: 1rem;
 }
-
 #navbar {
     position: sticky;
     top: 0;
     background-color: #F2E5BF;
+    margin: 1rem;
+}
+
+#landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    width: 100%;
+
 }
 
 .Center-logo{
@@ -53,4 +61,79 @@ li.left{
 
 li.right{
     margin-left: auto;
+}
+
+body{
+    margin: 0;
+}
+
+@media screen and (min-width: 400px){
+    #my_flexbox {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+    #navbar {
+        position: sticky;
+        top: 0;
+        background-color: #F2E5BF;
+        margin: 1rem;
+    }
+    
+    #landing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 100%;
+        width: 100%;
+    
+    }
+    
+    .Center-logo{
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    /* Comment */
+    .Logo{
+        max-height: 25px;
+        width: auto;
+    }
+    
+    ul{
+        list-style: none; /*This gets rid of bullets */
+        display: flex;
+        background-color: #F2E5BF;
+        margin: 0;
+        padding: 10px 0px;
+        width: 100%;
+    }
+    
+    li a{
+        text-decoration: none; /*This gets rid of underline */
+        color: #564457;
+        padding: 10px 30px; /*First is top and bottom, second it left and right */
+        font-family: "Sixtyfour Convergence", sans-serif;
+        font-size: large;
+    }
+    
+    li a:hover{
+        background-color: #FD8B51;
+    }
+    
+    li a:active{ /*active is when you click on the text */
+        background-color: #564457;
+    }
+    
+    li.left{
+        margin-right: auto;
+    }
+    
+    li.right{
+        margin-left: auto;
+    }
+    
+    body{
+        margin: 0;
+    }
 }
