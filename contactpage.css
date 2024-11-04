@@ -1,7 +1,102 @@
 
 body {
-    background-color: #F2E5BF; 
+    background-color: white; 
+    font-family: Helvetica, Arial, sans-serif;
+
+@media screen and (min-width: 400px){
+    #my_flexbox {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+    #navbar {
+        position: sticky;
+        top: 0;
+        background-color: #F2E5BF;
+        margin: 1rem;
+    }
+    
+    #landing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 100%;
+        width: 100%;
+    
+    }
+    
+    .Center-logo{
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    /* Comment */
+    .Logo{
+        max-height: 25px;
+        width: auto;
+    }
+    
+    ul{
+        list-style: none; /*This gets rid of bullets */
+        display: flex;
+        background-color: #F2E5BF;
+        margin: 0;
+        padding: 10px 0px;
+        width: 100%;
+    }
+    
+    li a{
+        text-decoration: none; /*This gets rid of underline */
+        color: #564457;
+        padding: 10px 30px; /*First is top and bottom, second it left and right */
+        font-family: "Sixtyfour Convergence", sans-serif;
+        font-size: large;
+    }
+    
+    li a:hover{
+        background-color: #FD8B51;
+    }
+    
+    li a:active{ /*active is when you click on the text */
+        background-color: #564457;
+    }
+    
+    li.left{
+        margin-right: auto;
+    }
+    
+    li.right{
+        margin-left: auto;
+    }
+    
+    body{
+        margin: 0;
+    }
+
+
+
+h1, h2, h3, p {
+    font-family: Helvetica, Arial, sans-serif; /* Set Helvetica font for headers and paragraphs */
 }
+  
+#content_wrapper {
+    background-color: #F2E5BF; /* Set background color for the wrapper */
+    padding: 10px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    margin: 50px auto;              /* Add margin to separate it from other sections */
+    width: 60%;
+    align-items: center;
+    border: 2px solid #257180;
+  }
+#content_wrapper2 {
+    background-color: #F2E5BF; /* Set background color for the wrapper */
+    padding: 5px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    margin: 30px auto;              /* Add margin to separate it from other sections */
+    width: 60%;
+    align-items: center;
+    border: 2px solid #257180;
+  }
+  
+
 #my_flexbox {
     display: flex;
     flex-direction: row;
@@ -18,10 +113,61 @@ body {
   
 }
 
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #F2E5BF;
+    margin: 1rem;
+}
+.Center-logo{
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Comment */
+.Logo{
+    max-height: 25px;
+    width: auto;
+}
+
+ul{
+    list-style: none; /*This gets rid of bullets */
+    display: flex;
+    background-color: #F2E5BF;
+    margin: 0;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+li a{
+    text-decoration: none; /*This gets rid of underline */
+    color: #564457;
+    padding: 10px 30px; /*First is top and bottom, second it left and right */
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: large;
+}
+
+li a:hover{
+    background-color: #FD8B51;
+}
+
+li a:active{ /*active is when you click on the text */
+    background-color: #564457;
+}
+
+li.left{
+    margin-right: auto;
+}
+
+li.right{
+    margin-left: auto;
+}
+
+
 h1 {
-    padding: 45px;
+    padding: 15px;
     text-align: center; 
-    color: #257180;
+    color: #CB6040;
    /* text-shadow: 1px 2px 1px black; */
   
 } 
@@ -33,8 +179,9 @@ h2 {
 }
 
 h3 {
-  color: #257180 ; 
+  color: #FD8B51 ; 
   text-align: center;
+  padding:5px;
 }
 
 
@@ -43,9 +190,8 @@ h3 {
     flex-direction: column;     /* Stack children vertically */
     align-items: center;        /* Center align children horizontally */
     justify-content: center;     /* Center align children vertically */
-    margin: 40px 20%;          /* Set top/bottom margin to 40px and left/right to 20% */
+    margin: 10px 20%;          /* Set top/bottom margin to 40px and left/right to 20% */
     padding: 20px;             /* Add some padding inside the card */
-    background-color: #F2E5BF; /*  off white color */
     max-width: 400px;          /* Maximum width of the card */
     text-align: center;         /* Center text inside the card */
 }
