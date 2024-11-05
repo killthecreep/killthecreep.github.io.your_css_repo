@@ -1,3 +1,4 @@
+/* Navbar and supporting elements below */
 #navbar {
     position: sticky;
     top: 0;
@@ -19,6 +20,7 @@
     flex-wrap: wrap;
 }
 
+/* Image right below Navbar */
 #hero_box{
     display: flex;
     justify-content: center;
@@ -27,6 +29,7 @@
     overflow: hidden;
 }
 
+/* Navbar logo */
 .Center-logo{
     flex-grow: 1;
     text-align: center;
@@ -49,7 +52,7 @@ h1, h2, h3, p {
   
 #content_wrapper {
     background-color: #F2E5BF; /* Set background color for the wrapper */
-    padding: 10px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    padding: 10px;             /* Add padding around the content cards */       
     margin: 50px auto;              /* Add margin to separate it from other sections */
     width: 60%;
     align-items: center;
@@ -57,7 +60,7 @@ h1, h2, h3, p {
   }
 #content_wrapper2 {
     background-color: #F2E5BF; /* Set background color for the wrapper */
-    padding: 5px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    padding: 5px;             /* Add padding around the content cards */      
     margin: 30px auto;              /* Add margin to separate it from other sections */
     width: 60%;
     align-items: center;
@@ -155,6 +158,8 @@ b {
     color: white; 
 }
 
+
+/* Footer Copyright information */
 footer {
     background-color: #257180; 
     color: white;

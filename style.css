@@ -112,6 +112,8 @@ h1{
     color: white; /* Optional: change text color for better readability */
 }
 
+
+/* Navbar and supporting elements below */
 #navbar {
     position: sticky;
     top: 0;
@@ -131,14 +133,6 @@ h1{
     padding: 1rem;
     width: 100%;
     flex-wrap: wrap;
-}
-
-#landing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 100%;
-    overflow: hidden;
 }
 
 ul {
@@ -173,6 +167,17 @@ li.right {
     margin-left: auto;
 }
 
+/* Image just below Navbar */
+#landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+
+/* Navbar logo */
 .Center-logo {
     flex-grow: 1;
     text-align: center;
@@ -183,6 +188,7 @@ li.right {
     width: auto;
 }
 
+/* Footer Image */
 footer {
     background-color: #257180; 
     color: white;
@@ -197,6 +203,7 @@ footer .container {
     max-width: 1200px; 
     margin: 0 auto;
 }
+
 
 /* Media Queries */
 @media screen and (max-width: 768px) {

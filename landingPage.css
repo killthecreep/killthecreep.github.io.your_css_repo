@@ -12,6 +12,8 @@ body {
     overflow-x: hidden;
 }
 
+
+/* Navbar and supporting elements below */
 #navbar {
     position: sticky;
     top: 0;
@@ -31,69 +33,6 @@ body {
     padding: 1rem;
     width: 100%;
     flex-wrap: nowrap;
-}
-
-.left-section, .right-section {
-    display: flex;
-    gap: 10px;
-    flex-direction: row; 
-}
-
-
-#landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-#wrapper {
-    display: flex;
-    background-color: #257180; 
-    align-items: center;
-    justify-content: center;
-    padding: 5px;             
-    margin: 1px auto;       
-    width: 90%;
-    max-width: 1;
-    border: 2px solid #257180;
-}
-#wrapper2 {
-    display: flex;
-    background-color: #564457; 
-    align-items: center;
-    justify-content: center;
-    padding: 5px;             
-    margin: 1px auto;       
-    width: 90%;
-    max-width: 1;
-    border: 2px solid #257180;
-}
-
-#wrapper3 {
-    display: flex;
-    background-color: #CB6040; 
-    align-items: center;
-    justify-content: center;
-    padding: 5px;             
-    margin: 1px auto;       
-    width: 90%;
-    max-width: 1;
-    border: 2px solid #257180;
-}
-
-#news {
-    background-color: #F2E5BF; 
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;           
-    margin: 30px auto;         
-    width: 60%;
-    border: 2px solid #257180;
-    align-self: stretch;
 }
 
 ul {
@@ -128,6 +67,7 @@ li.right {
     margin-left: auto;
 }
 
+/* Navbar logo */
 .Center-logo{
     flex-grow: 1;
     text-align: center;
@@ -138,6 +78,77 @@ li.right {
     width: auto;
 }
 
+/* Code for media, doesnt work */
+/* .left-section, .right-section {
+    display: flex;
+    gap: 10px;
+    flex-direction: row; 
+} */
+
+
+/* Image just below NavBar */
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+/* Wraps around flexboxes and looks nice*/
+#wrapper {
+    display: flex;
+    background-color: #257180; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px;             
+    margin: 1px auto;       
+    width: 90%;
+    max-width: 1;
+    border: 2px solid #257180;
+}
+/* Wraps around flexboxes and looks nice*/
+#wrapper2 {
+    display: flex;
+    background-color: #564457; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px;             
+    margin: 1px auto;       
+    width: 90%;
+    max-width: 1;
+    border: 2px solid #257180;
+}
+/* Wraps around flexboxes and looks nice*/
+#wrapper3 {
+    display: flex;
+    background-color: #CB6040; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px;             
+    margin: 1px auto;       
+    width: 90%;
+    max-width: 1;
+    border: 2px solid #257180;
+}
+
+/* Flexboxes within the wrappers */
+#news {
+    background-color: #F2E5BF; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;           
+    margin: 30px auto;         
+    width: 60%;
+    border: 2px solid #257180;
+    align-self: stretch;
+}
+
+
+/* Footer copyright information */
 footer {
     background-color: #257180; 
     color: white;
@@ -184,6 +195,7 @@ footer .container {
 
 }
 
+/* Media for 400px wide */
 @media screen and (max-width: 480px) {
 
     #my_flexbox {
