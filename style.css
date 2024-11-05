@@ -102,7 +102,7 @@ body {
 
 /* Specific event hover effect */
 .nbc-event:hover {
-    background-image: url('/images/nbc.jpeg');
+    background-image: url("/images/nbc.jpeg");
     background-size: cover;
     background-position: center;
     color: white; /* Optional: change text color for better readability */

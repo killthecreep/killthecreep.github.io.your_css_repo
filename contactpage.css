@@ -1,14 +1,22 @@
-#my_flexbox {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-}
 #navbar {
     position: sticky;
     top: 0;
     background-color: #F2E5BF;
-    margin: 1em;
-    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+#my_flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 #hero_box{
@@ -172,7 +180,7 @@ footer .container {
         position: sticky;
         top: 0;
         background-color: #F2E5BF;
-        margin: 1rem;
+        /* margin: 1rem; */
     }
     
     #landing{
