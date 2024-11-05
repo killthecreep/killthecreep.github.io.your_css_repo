@@ -211,7 +211,7 @@ section {
 
 /* Heading background images for each section */
 #ticketing .heading-background {
-    background-image: url('/images/FY24-Season-Header-Dragon-1920x400-2.jpg'); /* Replace with your image path */
+    background-image: url('images/FY24-Season-Header-Dragon-1920x400-2.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 200px; /* Adjust height to reveal more image */
