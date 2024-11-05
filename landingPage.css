@@ -40,7 +40,7 @@ body {
 }
 
 
-#landing img{
+#landing {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,24 +155,33 @@ footer .container {
 
 
 /* Media Queries */
-@media screen and (max-width: 1500px) {
-
+@media (max-width: 1500px) {
     #my_flexbox {
-        flex-direction: row;
+        flex-direction: row; 
+        align-items: flex-end;
     }
-
+    
     ul {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end; 
+        width: 100%;
+        padding: 0; 
+        justify-content: flex-end;
     }
 
     li {
-        margin: 5px 0;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     li a {
-        padding: 5px 15px;
+        padding: 15px 25px;
+        font-size: medium;
+        width: 100%; 
+        text-align: right;
     }
+
 }
 
 @media screen and (max-width: 480px) {

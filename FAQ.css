@@ -320,7 +320,7 @@ main {
     }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     #my_flexbox {
         flex-direction: row; 
         align-items: flex-end;
@@ -366,4 +366,4 @@ main {
     .faq-answer {
         font-size: 0.95rem;
     }
-} */
+}

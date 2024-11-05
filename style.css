@@ -234,7 +234,7 @@ footer .container {
         font-size: 0.7em;
     }
 
-    /* #my_flexbox {
+    #my_flexbox {
         flex-direction: column;
     }
 
@@ -249,7 +249,7 @@ footer .container {
 
     li a {
         padding: 5px 15px;
-    } */
+    }
 }
 
 @media screen and (max-width: 480px) {
