@@ -222,7 +222,7 @@ section {
 }
 
 #before-you-go .heading-background {
-    background-image: url('/images/Catherine-Jason-Sinn-1920x400-1.jpg'); /* Replace with your image path */
+    background-image: "images/Catherine-Jason-Sinn-1920x400-1.jpg"; /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 200px; /* Adjust height to reveal more image */
@@ -233,7 +233,7 @@ section {
 }
 
 #at-the-event .heading-background {
-    background-image: url('/images/peter-civic-center-1920x600-1-1024x320.jpg'); /* Replace with your image path */
+    background-image: "images/peter-civic-center-1920x600-1-1024x320.jpg"; /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 200px; /* Adjust height to reveal more image */
