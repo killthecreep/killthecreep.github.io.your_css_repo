@@ -30,9 +30,14 @@ body {
     margin: 0 auto;
     padding: 1rem;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
+.left-section, .right-section {
+    display: flex;
+    gap: 10px;
+    flex-direction: row; 
+}
 
 
 #landing img{
@@ -148,6 +153,8 @@ footer .container {
     margin: 0 auto;
 }
 
+
+/* Media Queries */
 @media screen and (max-width: 1500px) {
 
     #my_flexbox {
@@ -187,4 +194,3 @@ footer .container {
         padding: 3px 10px;
     }
 }
-
