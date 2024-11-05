@@ -171,6 +171,21 @@ li.right {
     width: auto;
 }
 
+footer {
+    background-color: #257180; 
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%; /
+    position: relative; 
+    margin-top: 2rem; 
+}
+
+footer .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .calendar-header {
