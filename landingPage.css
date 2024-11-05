@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    overflow-x: hidden; /* Prevents page horizontal scrolling */
+    overflow-x: hidden;
 }
 
 #navbar {
@@ -40,16 +40,6 @@ body {
     max-height: 100%;
     max-width: 100%;
     overflow: hidden;
-}
-
-.Center-logo{
-    flex-grow: 1;
-    text-align: center;
-}
-
-.Logo{
-    max-height: 25px;
-    width: auto;
 }
 
 #wrapper {
@@ -129,6 +119,16 @@ li.left {
 
 li.right {
     margin-left: auto;
+}
+
+.Center-logo{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.Logo{
+    max-height: 25px;
+    width: auto;
 }
 
 footer {
