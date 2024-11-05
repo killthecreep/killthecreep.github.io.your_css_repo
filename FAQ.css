@@ -1,12 +1,11 @@
-/* Navbar styling */
 #navbar {
     position: sticky;
     top: 0;
-    background-color: #F2E5BF; /* Keeping light background for navbar */
+    background-color: #F2E5BF;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    overflow-x: hidden; /* Prevents horizontal overflow */
+    overflow-x: hidden;
 }
 
 #my_flexbox {
@@ -17,7 +16,7 @@
     margin: 0 auto;
     padding: 1rem;
     width: 100%;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 ul {
@@ -34,7 +33,6 @@ li a {
     color: #564457; /* Neutral color for text */
     padding: 10px 30px; 
     font-family: "Sixtyfour Convergence", sans-serif;
-    font-size: large;
 }
 
 li a:hover {
@@ -261,6 +259,7 @@ section {
     
     ul {
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: flex-end; 
         width: 100%;
         padding: 0; 
