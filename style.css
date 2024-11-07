@@ -159,11 +159,11 @@ li a:active {
 }
 
 li.left {
-    margin-right: auto;
+    margin-right: 0%;
 }
 
 li.right {
-    margin-left: auto;
+    margin-left: 0%;
 }
 
 /* Image just below Navbar */
