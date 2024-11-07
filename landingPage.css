@@ -7,6 +7,7 @@
 /* Body text  */
 body {
     min-width: 480px;
+    max-width: 1500px;
     font-family: "Helvetica", Arial, sans-serif;
     background-color: #f4f4f4;
     overflow-x: hidden;
