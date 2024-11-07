@@ -128,11 +128,10 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    flex-wrap: wrap; 
     margin: 0 auto;
     padding: 1rem;
-    width: 100%;
-    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 ul {
@@ -260,6 +259,24 @@ footer .container {
 }
 
 @media screen and (max-width: 480px) {
+    #navbar{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    #my_flexbox {
+        flex-direction: column;
+    }
+
+    li.left {
+        margin-right: 0%;
+        
+    }
+    
+    li.right {
+        margin-left: 0%;
+    }
+    
     .calendar-grid {
         grid-template-columns: repeat(2, 1fr);
     }

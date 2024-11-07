@@ -6,9 +6,8 @@
 
 /* Body text  */
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    min-width: 480px;
+    font-family: "Helvetica", Arial, sans-serif;
     background-color: #f4f4f4;
     overflow-x: hidden;
 }
@@ -16,26 +15,38 @@ body {
 
 /* Navbar and supporting elements below */
 #navbar {
+    /* Sticky navbar */
     position: sticky;
     top: 0;
     background-color: #F2E5BF;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    overflow-x: hidden;
 }
 
+/* Flexboxes within the navbar */
+#my_flexbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+/* Flexboxes within the navbar */
 #my_flexbox {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    flex-wrap: wrap; 
     margin: 0 auto;
     padding: 1rem;
-    width: 100%;
-    flex-wrap: nowrap;
+    max-width: 100%;
 }
 
+/* List items part of the navbar */
 ul {
     list-style: none;
     display: flex;
@@ -52,30 +63,35 @@ li a {
     font-family: "Sixtyfour Convergence", sans-serif;
 }
 
+/* Change color when hovered over */
 li a:hover {
     background-color: #FD8B51;
 }
 
+/* Change color when pressed */
 li a:active {
     background-color: #564457;
 }
 
+/* Keeps left button left */
 li.left {
-    margin-right: auto;
+    margin-right: 0%;
 }
 
+/* Keeps right button right */
 li.right {
-    margin-left: auto;
+    margin-left: 0%;
 }
 
 /* Navbar logo */
 .Center-logo{
     flex-grow: 1;
     text-align: center;
+    max-width: fit-content;
 }
 
 .Logo{
-    max-height: 25px;
+    max-height: 20px;
     width: auto;
 }
 
@@ -125,6 +141,7 @@ li.right {
 /* Wraps around flexboxes and looks nice*/
 #wrapper3 {
     display: flex;
+    flex-wrap: wrap;
     background-color: #CB6040; 
     align-items: center;
     justify-content: center;
@@ -134,6 +151,7 @@ li.right {
     max-width: 1;
     border: 2px solid #257180;
 }
+
 
 /* Flexboxes within the wrappers */
 #news {
@@ -167,7 +185,7 @@ footer .container {
 
 
 /* Media Queries */
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
     #my_flexbox {
         flex-direction: row; 
         align-items: flex-end;
@@ -194,25 +212,105 @@ footer .container {
         text-align: right;
     }
 
+} */
+
+/* Media for 480px wide */
+@media only screen and (max-width: 480px) {
+
+    #navbar{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    #my_flexbox2 {
+        flex-direction: column;
+    }
+
+    li.left {
+        margin-right: 0%;
+        
+    }
+    
+    li.right {
+        margin-left: 0%;
+    }
+
+    #wrapper{
+        flex-direction: column;
+    }
+
+    #wrapper2{
+        flex-direction: column;
+    }
+
+    #wrapper3{
+        flex-direction: column;
+    }
 }
 
-/* Media for 400px wide */
-@media screen and (max-width: 480px) {
-
-    #my_flexbox {
-        flex-direction: column;
-    }
-
-    ul {
+    /* ul {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
-    li {
+    /* li {
         margin: 5px 0;
     }
 
     li a {
         padding: 3px 10px;
+    } */
+
+    /* #navbar {
+        position: sticky;
+        top: 0;
+        background-color: #F2E5BF;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        overflow-x: hidden;
     }
-}
+    
+    #my_flexbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    
+    ul {
+        list-style: none;
+        display: flex;
+        background-color: #F2E5BF;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+    } */
+    
+    /* li a {
+        text-decoration: none;
+        color: #564457;
+        padding: 10px 30px;
+        font-family: "Sixtyfour Convergence", sans-serif;
+    }
+    
+    li a:hover {
+        background-color: #FD8B51;
+    }
+    
+    li a:active {
+        background-color: #564457;
+    }
+    
+    li.left {
+        margin-right: auto;
+    }
+    
+    li.right {
+        margin-left: auto;
+    } */
+
