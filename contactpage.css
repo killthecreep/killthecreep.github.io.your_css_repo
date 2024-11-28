@@ -1,87 +1,68 @@
+/* Navbar and supporting elements below */
+#navbar {
+    /* Sticky navbar */
+    position: sticky;
+    top: 0;
+    background-color: #F2E5BF;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Flexboxes within the navbar */
+#my_flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+    
+}
+
+/* Image just below NavBar */
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Image right below Navbar */
+#hero_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/* Navbar logo */
+.Center-logo{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.Logo{
+    max-height: 25px;
+    width: auto;
+}
 
 body {
     background-color: white; 
-    font-family: Helvetica, Arial, sans-serif;
-
-@media screen and (min-width: 400px){
-    #my_flexbox {
-        display: flex;
-        /* justify-content: space-between; */
-        align-items: center;
-    }
-    #navbar {
-        position: sticky;
-        top: 0;
-        background-color: #F2E5BF;
-        margin: 1rem;
-    }
-    
-    #landing{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-height: 100%;
-        width: 100%;
-    
-    }
-    
-    .Center-logo{
-        flex-grow: 1;
-        text-align: center;
-    }
-    
-    /* Comment */
-    .Logo{
-        max-height: 25px;
-        width: auto;
-    }
-    
-    ul{
-        list-style: none; /*This gets rid of bullets */
-        display: flex;
-        background-color: #F2E5BF;
-        margin: 0;
-        padding: 10px 0px;
-        width: 100%;
-    }
-    
-    li a{
-        text-decoration: none; /*This gets rid of underline */
-        color: #564457;
-        padding: 10px 30px; /*First is top and bottom, second it left and right */
-        font-family: "Sixtyfour Convergence", sans-serif;
-        font-size: large;
-    }
-    
-    li a:hover{
-        background-color: #FD8B51;
-    }
-    
-    li a:active{ /*active is when you click on the text */
-        background-color: #564457;
-    }
-    
-    li.left{
-        margin-right: auto;
-    }
-    
-    li.right{
-        margin-left: auto;
-    }
-    
-    body{
-        margin: 0;
-    }
-
-
+    font-family: "Helvetica", Arial, sans-serif;
+    margin: 0;
+}
 
 h1, h2, h3, p {
-    font-family: Helvetica, Arial, sans-serif; /* Set Helvetica font for headers and paragraphs */
+    font-family: "Helvetica", Arial, sans-serif; /* Set Helvetica font for headers and paragraphs */
 }
   
 #content_wrapper {
     background-color: #F2E5BF; /* Set background color for the wrapper */
-    padding: 10px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    padding: 10px;             /* Add padding around the content cards */       
     margin: 50px auto;              /* Add margin to separate it from other sections */
     width: 60%;
     align-items: center;
@@ -89,7 +70,7 @@ h1, h2, h3, p {
   }
 #content_wrapper2 {
     background-color: #F2E5BF; /* Set background color for the wrapper */
-    padding: 5px;             /* Add padding around the content cards */       /* Optional: add rounded corners */
+    padding: 5px;             /* Add padding around the content cards */      
     margin: 30px auto;              /* Add margin to separate it from other sections */
     width: 60%;
     align-items: center;
@@ -102,32 +83,9 @@ h1, h2, h3, p {
     flex-direction: row;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    gap: 20px;               /* Space between cards */
+    margin: 0 auto;
     flex-wrap: wrap;         /* Ensure it wraps on smaller screens */
     padding: 20px;           /* Add padding to the flexbox area */
-}
-
-.hero_box{
-    width: 100%;
-    height: 15%;
-  
-}
-
-#navbar {
-    position: sticky;
-    top: 0;
-    background-color: #F2E5BF;
-    margin: 1rem;
-}
-.Center-logo{
-    flex-grow: 1;
-    text-align: center;
-}
-
-/* Comment */
-.Logo{
-    max-height: 25px;
-    width: auto;
 }
 
 ul{
@@ -156,11 +114,11 @@ li a:active{ /*active is when you click on the text */
 }
 
 li.left{
-    margin-right: auto;
+    margin-right: 0%;
 }
 
 li.right{
-    margin-left: auto;
+    margin-left: 0%;
 }
 
 
@@ -204,4 +162,48 @@ h3 {
 
 p {
     color: #564457; 
+}
+
+b {
+    color: white; 
+}
+
+
+/* Footer Copyright information */
+footer {
+    background-color: #257180; 
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%; /
+    position: relative; 
+    margin-top: 2rem; 
+}
+
+footer .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Media for 480px wide */
+@media only screen and (max-width: 480px) {
+
+    #navbar{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    #my_flexbox{
+        flex-direction: column;
+    }
+
+    li.left {
+        margin-right: 0%;
+        
+    }
+    
+    li.right {
+        margin-left: 0%;
+    }
+
 }

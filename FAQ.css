@@ -1,76 +1,318 @@
-/* 1. start by setting to display:flex 
-    2. add a max/min width to the items
-    3. show how we can change flex direction
-    4. show how we can change wrapping
-    5. show how we can change how we justify and align items (show both vertical and horizontal)
-        a. emphasize how these can be used to easily center content
-    6. show order and flex grow*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* ~~~ the section we will change for our class notes to apply flexbox / grid starts here! ~~~ */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; 
+}
 
-/* ~~ this is where we apply flexbox styling ~~ */
-#my_flexbox{
-    display:flex;
-    /* flex-direction: column, row, column-reverse or row-reverse; */
-    flex-direction: row;
-    /* flex-wrap: wrap, nowrap, wrap-reverse */
+/* Navbar and supporting elements below */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #F2E5BF;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    /* overflow-x: hidden;
+    flex-wrap: wrap; */
+}
+
+#my_flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
     flex-wrap: wrap;
-    /* justify-content changes how items are aligned
-        this applies to the *flex direction* */
-    /* justify-content: center, flex-start, flex-end, space-around, or space between */
+}
+
+ul {
+    list-style: none; 
+    display: flex;
+    background-color: #F2E5BF;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+li a {
+    text-decoration: none; 
+    color: #564457; /* Neutral color for text */
+    padding: 10px 30px; 
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+li a:hover {
+    background-color: #FD8B51;
+}
+
+li a:active { 
+    background-color: #564457;
+}
+
+li.left {
+    margin-right: 0%;
+}
+
+li.right {
+    margin-left: 0%;
+}
+
+/* Navbar logo */
+
+.Center-logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.Logo {
+    max-height: 25px;
+    width: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.header {
+    background-color: #564457; /* Changed to teal */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: #333;
+    text-align: center;
+}
+
+/* FAQ Intro Section */
+#intro {
+    background-color: #F2E5BF; /* Light background for intro */
+    padding: 2rem 0;
+}
+
+#intro h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #444;
+}
+
+#intro p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#intro a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#intro a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ item styling */
+.faq-item {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.faq-answer strong {
+    color: #333;
+}
+
+/* Link styling inside FAQ items */
+.faq-answer a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #257180; /* Background color for footer */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%; /* Ensure footer spans full width */
+    position: relative; /* Position relative to avoid conflict with flex layout */
+    margin-top: 2rem; /* Add spacing above footer */
+}
+
+footer .container {
+    max-width: 1200px; /* Adjust content width */
+    margin: 0 auto; /* Center container content */
+}
+
+/* Flexbox layout for FAQ sections */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Color scheme for sections */
+#ticketing {
+    background-color: #564457; /* Dark background for ticketing section */
+}
+
+#before-you-go {
+    background-color: #257180; /* Teal for before you go section */
+}
+
+#at-the-event {
+    background-color: #CB6040; /* Warm red for at the event section */
+}
+
+/* Heading background images for each section */
+#ticketing .heading-background {
+    background-image: url("images/FY24-Season-Header-Dragon-1920x400-2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust height to reveal more image */
+    display: flex;
+    align-items: center;
     justify-content: center;
-    /* align-items changes how items are aligned
-        this applies to the *opposite of flex direction* */
-    /* align-items: center, flex-start, flex-end, stretch, or baseline (centers items) */
-    /* show them how to easily center items (justify-content:center + align-content:center) */
+    text-align: center;
 }
 
-/* show how to order using order: # property for individual items
-order starts at zero
-
-flex-grow: # is the relative width for each individual item*/
-
-#ticket_1{
-    /* for flex-grow to work, items must have a set width */
-    flex-grow: 2;
-    order:1;
+#before-you-go .heading-background {
+    background-image: url("images/Catherine-Jason-Sinn-1920x400-1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust height to reveal more image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.info{
-    max-width: 30vw;
-    min-width: 300px;
+#at-the-event .heading-background {
+    background-image: url("images/peter-civic-center-1920x600-1-1024x320.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust height to reveal more image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* ~~ this is where we apply grid styling ~~ */
-
-
-/* 1. start by setting display grid
-    2. add grid template columns, then rows, then call out how we have overfilled the grid but it still works
-    3. show fr unit
-    4. show justify content/ align content
-        a. show gap
-    5. jump back over to the ppt to cover grid-column/grid-row then show example here
-    6. jump back over to show grid-area then show example here
-    */
-
-/* note, here we have overfilled the grid,
-    (providing more rows of content than we defined in css)
-    but it keeps tiling following the same pattern by default */
-#my_grid{
-    display:grid;
-    grid-template-columns: auto auto auto auto; /* use fr unit to calculate *relative* widths/heights */
-    grid-template-rows: auto auto;
-
-    gap: 20px 50px; /*our row gap is 20px, our column gap is 50px */
-    /* justify content is for horizontal alignment */
-    /* justify content: space-evenly, space-around, space-between, center, start, end */
-
-    /* align-content is for vertical alignment */
-    /* align-content: center, space-evenly, space-around, space-between, start, end */
+#ticketing .heading-background h2,
+#before-you-go .heading-background h2,
+#at-the-event .heading-background h2 {
+    color: white; /* Set text color to white */
+    text-align: center; /* Center text */
+    font-size: 3rem; /* Adjust font size as needed */
+    margin: 0; /* Remove margin for better centering */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: add text shadow for better contrast */
 }
 
-#unicorns_1{
-    /* grid-row: span 2;
-    grid-column: span 3; */
-    grid-area: span 2/span 4;
+/* Media Queries */
+@media only screen and (max-width: 480px){
+    #navbar{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    #my_flexbox{
+        flex-direction: column;
+    }
+
+    li.left {
+        margin-right: 0%;
+        
+    }
+    
+    li.right {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end; 
+        width: 100%;
+        padding: 0; 
+        justify-content: flex-end;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    li a {
+        padding: 15px 25px;
+        font-size: medium;
+        width: 100%; 
+        text-align: right;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    #intro h2 {
+        font-size: 1.25rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+    }
 }
